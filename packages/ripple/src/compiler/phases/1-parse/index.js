@@ -715,18 +715,22 @@ function get_comment_handlers(source, comments, index = 0) {
 	};
 }
 
+class $Test {}
+
 export function parse(source) {
 	const comments = [];
 	const { onComment, add_comments } = get_comment_handlers(source, comments);
 	let ast;
 
 	try {
-		ast = parser.parse(source, {
+		const whatsThis = parser.parse(source, {
 			sourceType: 'module',
 			ecmaVersion: 13,
 			locations: true,
 			onComment,
 		});
+		console.log(whatsThis);
+		ast = whatsThis;
 	} catch (e) {
 		throw e;
 	}

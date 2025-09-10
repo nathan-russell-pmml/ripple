@@ -40,9 +40,9 @@ export { flush_sync as flushSync, untrack, deferred } from './internal/client/ru
 
 export { RippleArray } from './array.js';
 
-export { RippleSet } from './set.js';
+export { $Set } from './set.js';
 
-export { RippleMap } from './map.js';
+export { $Map } from './map.js';
 
 export { keyed } from './internal/client/for.js';
 

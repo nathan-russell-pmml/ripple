@@ -39,19 +39,19 @@ export type Context<T> = {
 
 export declare function createContext<T>(initialValue: T): Context<T>;
 
-export class RippleSet<T> extends Set<T> {
+export class $Set<T> extends Set<T> {
   readonly $size: number;
-  isDisjointFrom(other: RippleSet<T> | Set<T>): boolean;
-  isSubsetOf(other: RippleSet<T> | Set<T>): boolean;
-  isSupersetOf(other: RippleSet<T> | Set<T>): boolean;
-  difference(other: RippleSet<T> | Set<T>): RippleSet<T>;
-  intersection(other: RippleSet<T> | Set<T>): RippleSet<T>;
-  symmetricDifference(other: RippleSet<T> | Set<T>): RippleSet<T>;
-  union(other: RippleSet<T> | Set<T>): RippleSet<T>;
+  isDisjointFrom(other: $Set<T> | Set<T>): boolean;
+  isSubsetOf(other: $Set<T> | Set<T>): boolean;
+  isSupersetOf(other: $Set<T> | Set<T>): boolean;
+  difference(other: $Set<T> | Set<T>): $Set<T>;
+  intersection(other: $Set<T> | Set<T>): $Set<T>;
+  symmetricDifference(other: $Set<T> | Set<T>): $Set<T>;
+  union(other: $Set<T> | Set<T>): $Set<T>;
   toJSON(): T[];
 }
 
-export class RippleMap<K, V> extends Map<K, V> {
+export class $Map<K, V> extends Map<K, V> {
     get $size(): number;
     toJSON(): [K, V][];
 }

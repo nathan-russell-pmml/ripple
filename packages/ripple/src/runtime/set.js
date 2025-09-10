@@ -8,7 +8,7 @@ const new_other_methods = ['difference', 'intersection', 'symmetricDifference', 
 
 let init = false;
 
-export class RippleSet extends Set {
+export class $Set extends Set {
 	#tracked_size;
 	#tracked_items = new Map();
 
@@ -33,7 +33,7 @@ export class RippleSet extends Set {
 	}
 
 	#init() {
-		var proto = RippleSet.prototype;
+		var proto = $Set.prototype;
 		var set_proto = Set.prototype;
 
 		for (const method of introspect_methods) {
@@ -56,7 +56,7 @@ export class RippleSet extends Set {
 			proto[method] = function (other, ...v) {
 				this.$size;
 
-				if (other instanceof RippleSet) {
+				if (other instanceof $Set) {
 					other.$size;
 				}
 
@@ -72,11 +72,11 @@ export class RippleSet extends Set {
 			proto[method] = function (other, ...v) {
 				this.$size;
 
-				if (other instanceof RippleSet) {
+				if (other instanceof $Set) {
 					other.$size;
 				}
 
-				return new RippleSet(set_proto[method].apply(this, [other, ...v]));
+				return new $Set(set_proto[method].apply(this, [other, ...v]));
 			};
 		}
 	}

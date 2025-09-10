@@ -515,12 +515,12 @@ component List() {
 }
 ```
 
-#### RippleSet
+#### $Set
 ```ripple
-import { RippleSet } from 'ripple';
+import { $Set } from 'ripple';
 
 component SetExample() {
-  const mySet = new RippleSet([1, 2, 3]);
+  const mySet = new $Set([1, 2, 3]);
   
   <div>
     <p>{"Size: "}{mySet.$size}</p>  // Reactive size
@@ -635,7 +635,7 @@ export default defineConfig({
 
 ### vs Solid
 - Component definition with `component` keyword
-- Built-in collections (RippleArray, RippleSet)
+- Built-in collections (RippleArray, $Set)
 - Different templating approach within component bodies
 
 ## Best Practices
@@ -645,7 +645,7 @@ export default defineConfig({
 3. **Effects**: Use `effect()` for side effects, not direct reactive variable access
 4. **Components**: Keep components focused and use TypeScript interfaces for props
 5. **Styling**: Use scoped `<style>` elements for component-specific styles
-6. **Collections**: Use RippleArray/RippleSet for reactive collections instead of regular arrays/sets
+6. **Collections**: Use RippleArray/$Set for reactive collections instead of regular arrays/sets
 
 ## Current Limitations
 

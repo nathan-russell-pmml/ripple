@@ -4,7 +4,7 @@ const introspect_methods = ['entries', 'forEach', 'values', Symbol.iterator];
 
 let init = false;
 
-export class RippleMap extends Map {
+export class $Map extends Map {
 	#tracked_size;
 	#tracked_items = new Map();
 
@@ -29,7 +29,7 @@ export class RippleMap extends Map {
 	}
 
 	#init() {
-		var proto = RippleMap.prototype;
+		var proto = $Map.prototype;
 		var map_proto = Map.prototype;
 
 		for (const method of introspect_methods) {

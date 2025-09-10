@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { mount, flushSync, RippleSet } from 'ripple';
+import { mount, flushSync, $Set } from 'ripple';
 
-describe('RippleSet', () => {
+describe('$Set', () => {
   let container;
 
   function render(component) {
@@ -22,7 +22,7 @@ describe('RippleSet', () => {
 
   it('handles add and delete operations', () => {
     component SetTest() {
-      let items = new RippleSet([1, 2, 3]);
+      let items = new $Set([1, 2, 3]);
 
       <button onClick={() => items.add(4)}>{'add'}</button>
       <button onClick={() => items.delete(2)}>{'delete'}</button>
@@ -54,7 +54,7 @@ describe('RippleSet', () => {
 
   it('handles clear operation', () => {
     component SetTest() {
-      let items = new RippleSet([1, 2, 3]);
+      let items = new $Set([1, 2, 3]);
 
       <button onClick={() => items.clear()}>{'clear'}</button>
       <Child items={items} />
@@ -78,7 +78,7 @@ describe('RippleSet', () => {
 
   it('handles has operation', () => {
     component SetTest() {
-      let items = new RippleSet([1, 2, 3]);
+      let items = new $Set([1, 2, 3]);
       let $hasValue = items.has(2);
 
       <button onClick={() => items.delete(2)}>{'delete'}</button>

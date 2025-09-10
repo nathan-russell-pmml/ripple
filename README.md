@@ -256,22 +256,22 @@ accessing the `length` property of a `RippleArray` will be not be reactive, inst
 
 #### Reactive Set
 
-The `RippleSet` extends the standard JS `Set` class, and supports all of its methods and properties. However,
-accessing the `size` property of a `RippleSet` will be not be reactive, instead you should use `$size`.
+The `$Set` extends the standard JS `Set` class, and supports all of its methods and properties. However,
+accessing the `size` property of a `$Set` will be not be reactive, instead you should use `$size`.
 
 ```js
-import { RippleSet } from 'ripple';
+import { $Set } from 'ripple';
 
-const set = new RippleSet([1, 2, 3]);
+const set = new $Set([1, 2, 3]);
 ```
 
-RippleSet's reactive methods or properties can be used directly or assigned to reactive variables.
+$Set's reactive methods or properties can be used directly or assigned to reactive variables.
 
 ```jsx
-import { RippleSet } from 'ripple';
+import { $Set } from 'ripple';
 
 export component App() {
-  const set = new RippleSet([1, 2, 3]);
+  const set = new $Set([1, 2, 3]);
 
   // direct usage
   <p>{"Direct usage: set contains 2: "}{set.has(2)}</p>
@@ -287,22 +287,22 @@ export component App() {
 
 #### Reactive Map
 
-The `RippleMap` extends the standard JS `Map` class, and supports all of its methods and properties. However,
-accessing the `size` property of a `RippleMap` will be not be reactive, instead you should use `$size`.
+The `$Map` extends the standard JS `Map` class, and supports all of its methods and properties. However,
+accessing the `size` property of a `$Map` will be not be reactive, instead you should use `$size`.
 
 ```js
-import { RippleMap } from 'ripple';
+import { $Map } from 'ripple';
 
-const map = new RippleMap([[1,1], [2,2], [3,3], [4,4]]);
+const map = new $Map([[1,1], [2,2], [3,3], [4,4]]);
 ```
 
-RippleMap's reactive methods or properties can be used directly or assigned to reactive variables.
+$Map's reactive methods or properties can be used directly or assigned to reactive variables.
 
 ```jsx
-import { RippleMap } from 'ripple';
+import { $Map } from 'ripple';
 
 export component App() {
-  const map = new RippleMap([[1,1], [2,2], [3,3], [4,4]]);
+  const map = new $Map([[1,1], [2,2], [3,3], [4,4]]);
 
   // direct usage
   <p>{"Direct usage: map has an item with key 2: "}{map.has(2)}</p>
